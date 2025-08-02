@@ -1,0 +1,168 @@
+@use '../variables' as *; // Make variables available
+/* set +1px because of the cell borders,
+this was each cell is 50px,
+271px div -> 250px table -> 50px cell */
+#card {
+  text-align: center;
+  padding: 5px; // Reduce padding for mobile
+  width: auto; // Let the grid handle width
+  margin: .1em; // Reduce margin
+  font-family: $mainFontFamily;
+  font-weight: bold;
+  font-size: 1.2em; // Reduce base font size for mobile
+  position: relative;
+  background-color: #fff;
+  box-shadow: inset 0 0 7px rgba(0,0,0,0.9);
+  border: 2px solid white; // Added white border
+  // outline: 1px solid #ccc; // Optional: subtle outline to make white border visible on white page background
+ 
+  &.bingo {
+    background: url('../../../images/logo.png') no-repeat 5px 90px;
+    table {
+      td { display: none; }
+    }
+  }
+
+  table {
+    width: 100%;
+    background-color: $mainWheatColour;
+    color: black;
+    box-shadow: 0 0 7px rgba(0,0,0,0.9);
+
+    th, td {
+      border: 1px solid lightgoldenrodyellow;
+      text-shadow: 0 1px 1px white;
+      // Base mobile cell size
+      width: 30px;
+      height: 30px;
+      line-height: 30px; // Center text vertically
+      box-sizing: border-box; // Include padding/border in size
+    }
+
+    th {
+      color: white;
+      text-align: center;
+
+      &.firstCol {
+        background-color: $firstColColour;
+      }
+
+      &.secondCol {
+        background-color: $secondColColour;
+      }
+
+      &.thirdCol {
+        background-color: $thirdColColour;
+      }
+
+      &.fourthCol {
+        background-color: $fourthColColour;
+      }
+
+      &.fifthCol {
+        background-color: $fifthColColour;
+      }
+    }
+
+    td {
+      position: relative;
+      padding-left: 3px;
+      padding-right: 3px;
+      cursor: pointer;
+
+      &.marked:before {
+        content: "";
+        position: absolute;
+        top: 1%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+        -webkit-filter: blur(5px);
+        filter: blur(5px); // Add standard filter property for compatibility
+        z-index: 2;
+      }
+
+      &.marked {
+        background: radial-gradient(circle at 50% 120%, #e17000, #f6c079 10%, #e17000 80%, #e17000 100%);
+        border-radius: 50%;
+      }
+
+      &.drawn {
+        // background: radial-gradient(circle at 50% 120%, #dce1af, #f6c079 10%, #e11b3c 80%, #93abe1 100%); // Original gradient
+        background-color: red !important; // Test with a solid, obvious color
+        color: white !important; // Ensure text is visible
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+
+// Small devices (phones, portrait and landscape)
+@media (max-width: 767px) {
+  #card {
+    font-size: 1em; // Further reduce font size on smallest screens
+    padding: 3px;
+    margin: 1px;
+
+    table {
+      th, td {
+        width: 25px; // Smaller cells for small screens
+        height: 25px;
+        line-height: 25px;
+      }
+      th {
+        font-size: 0.8em; // Make header text smaller
+      }
+    }
+  }
+  // Adjust layout for cards container if needed (likely in app.scss or where #leftGameScreen is styled)
+  // e.g., make cards display in fewer columns or wrap differently
+}
+
+
+// Medium devices (tablets, landscape) and potentially phones in landscape
+@media (min-width: 481px) and (max-width: 991px) and (orientation: landscape) {
+   #card {
+    font-size: 1.1em; // Slightly larger than smallest screens
+    padding: 4px;
+
+    table {
+      th, td {
+        width: 28px; // Adjust cell size for landscape phones/small tablets
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+// Larger screens (use the base styles defined at the top)
+@media (min-width: 992px) {
+  #card {
+    font-size: 1.5em; // Restore larger font for desktop
+    padding: 10px;
+    margin: .2em;
+
+     table {
+      th, td {
+        width: 40px; // Restore original desktop size
+        height: 40px;
+        line-height: 40px;
+      }
+       th {
+        font-size: 1em; // Restore default header size
+      }
+    }
+  }
+}
+// Style for highlighting winning cells
+td.winning-cell {
+  background-color: yellow !important; // Use !important to override other potential background styles
+  color: black !important; // Ensure text is readable
+  font-weight: bold;
+  border: 2px solid red !important; // Add a border for more emphasis
+}

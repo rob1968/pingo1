@@ -1,0 +1,65 @@
+@use '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap' as *;
+@use 'back-office/back-office-app' as *;
+@use 'fonts' as *; // Note: Underscore prefix is optional with @use
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'breakpoints' as *;
+@use 'helpers' as *;
+@use 'header' as *;
+@use 'footer' as *;
+@use 'register_page' as *;
+@use 'market-place/market-space' as *;
+@use 'market-place/market_cards' as *;
+@use 'dauber/blower' as *;
+@use 'dauber/ball' as *;
+@use 'cards/card' as *;
+@use 'timer/timer' as *;
+@use 'winning/winning-dialog' as *;
+@use 'winning/flying-prize' as *;
+@use 'winning/winning-patterns-animation-module' as *;
+@use 'orientation-prompt' as *; // Import the new orientation prompt styles
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('../../images/background.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+}
+
+#gameWrapper {
+  color: $mainFrontColour;
+
+  #gameContainer {
+    width: 90%;
+    margin: 2% auto 0 auto;
+    display: flex;
+    align-content: flex-start;
+
+    @include breakpointMaxWidth('xs') {
+      flex-wrap: wrap-reverse;
+    }
+
+    #leftGameScreen {
+      order: 1;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    #rightGameScreen {
+      order: 2;
+    }
+  }
+}
+
+// Hide close button on the winner dialog
+#winningDialogContainer .modal-close {
+  display: none !important; // Use !important to ensure override
+}

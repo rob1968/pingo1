@@ -1,0 +1,11 @@
+@use '../variables' as *; // Make variables available
+@use '../mixins' as *;    // Make mixins available
+#flyingPrize {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  color: $mainFrontColour;
+  font-size: 10em;
+  font-weight: bold;
+  @include win-color-effect();
+}

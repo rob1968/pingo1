@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+#actions span {
+  border-radius: 150%;
+  border: 2px solid black;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  height: 25px;
+  margin: 5px 15px;
+  padding-top: 3px;
+  text-align: center;
+  transition-duration: 0.1s;
+  transition-property: transform;
+  width: 33px;
+}
+#actions span:hover {
+  transform: scale(1.1);
+}
+#actions .actions-info {
+  border-color: #3498DB;
+  color: #3498DB;
+}
+#actions .actions-delete {
+  border-color: #B7477D;
+  color: #B7477D;
+}
+
+.button {
+  border-radius: 28px;
+  border: 0;
+  box-shadow: 0 1px 1px #d9d9d9;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 15px;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  transition-property: transform;
+  background: #642e87;
+  background: -webkit-linear-gradient(#642e87, purple); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#642e87, purple); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#642e87, purple); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#642e87, purple); /* Standard syntax */
+}
+.button:hover {
+  transform: scale(1.1);
+}
+
+.dialog {
+  border: 1px solid lightgray;
+}
+.dialog .dialog-header {
+  background-color: #642e87;
+  color: #F5DEB2;
+  font-family: "Roboto Slab", serif;
+  font-size: 42px;
+  margin: 0;
+  padding: 10px 10px 10px 20px;
+  text-align: left;
+}
+.dialog .dialog-body {
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  max-height: 50vh;
+  overflow-x: hidden;
+  padding: 10px 30px 30px 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.dialog .dialog-footer {
+  padding: 10px;
+  text-align: right;
+}
+.dialog .dialog-footer .button {
+  margin: 10px;
+}
+
+.dialog-modal-open {
+  overflow: hidden; /* no body scroll */
+}
+
+.dialog-modal {
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.dialog-modal .dialog-modal-wrap {
+  background: white;
+  margin: 5% auto;
+  width: 350px;
+}
+
+.dialog-dismiss {
+  color: gray;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#form .form-label {
+  color: #A0A0A0;
+  display: block;
+  font-size: 12px;
+  padding: 12px 0 6px;
+}
+#form .form-row {
+  padding-left: 20px;
+  text-align: left;
+}
+#form .form-row input {
+  font-size: 16px;
+  padding: 10px;
+}
+
+#logo {
+  background: #642e88 url("../../../../images/logo.png");
+  background-size: cover;
+  display: inline-block;
+  height: 60px;
+  vertical-align: middle;
+  width: 100px;
+}
+
+#main-table table {
+  width: 100%;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+}
+#main-table table th {
+  cursor: pointer;
+  padding: 5px;
+}
+#main-table table td {
+  cursor: cell;
+  padding: 5px;
+  background-color: #fff;
+}
+#main-table .toolbar {
+  margin-left: 20px;
+}
+#main-table .toolbar a, #main-table .toolbar button {
+  background: #3498db linear-gradient(to bottom, #3498db, #2980b9);
+  border-radius: 28px;
+  box-shadow: 0 1px 3px #666666;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 0;
+  margin-right: 5px;
+}
+#main-table .toolbar a:hover, #main-table .toolbar button:hover {
+  background: #3cb0fd linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.logout-module {
+  display: inline-block;
+  float: right;
+  margin-right: 40px;
+}
+
+#backOffice .toolbar {
+  margin: 40px;
+}
+#backOffice .toolbar-add {
+  float: left;
+}
+#backOffice .toolbar-search {
+  float: right;
+}
+#backOffice .toolbar-search input {
+  font-size: 16px;
+  padding: 10px;
+}
+#backOffice .toolbar-add-btn {
+  font-size: 32px;
+}
+#backOffice .back-office-datagrid {
+  clear: both;
+  margin: 40px;
+  padding-top: 20px;
+}
+
+html, body {
+  background: #f0f0f0;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Roboto Slab", serif;
+}
+
+.app-header {
+  background-color: #642e88;
+  padding: 10px 5px;
+  color: #F5DEB2;
+  font-size: 1.6em;
+}
+
+.login-form {
+  width: 350px;
+  margin: 100px auto;
+  text-align: center;
+}
+.login-form button {
+  float: right;
+  margin-top: 21px;
+}
+.login-form input {
+  width: 307px;
+}
+
+footer {
+  margin: 26px auto 0 auto;
+  font-size: 10px;
+  text-align: center;
+  color: lightslategray;
+}
+
+#errorMsg {
+  width: 300px;
+  margin: -33px auto 32px auto;
+  text-align: center;
+  color: red;
+}
+/*# sourceMappingURL=back-office.css.map */

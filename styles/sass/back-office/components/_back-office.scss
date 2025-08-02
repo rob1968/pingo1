@@ -1,0 +1,28 @@
+@use '../../variables' as *; // Make variables available
+#backOffice {
+  .toolbar {
+    margin: 40px;
+  }
+
+  .toolbar-add {
+    float: left;
+  }
+
+  .toolbar-search {
+    float: right;
+    input {
+      font-size: $backOfficeInputsFontSize;
+      padding: 10px;
+    }
+  }
+
+  .toolbar-add-btn {
+    font-size: 32px;
+  }
+
+  .back-office-datagrid {
+    clear: both;
+    margin: 40px;
+    padding-top: 20px;
+  }
+}

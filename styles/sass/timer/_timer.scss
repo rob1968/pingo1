@@ -1,0 +1,45 @@
+@use '../variables' as *; // Make variables available
+@use '../mixins' as *;    // Make mixins available
+#timerContainer {
+  display: none;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+
+  .inner-shadow {
+    color: $mainFrontColour;
+    font-size: 10em;
+    font-weight: bold;
+    @include win-color-effect();
+  }
+
+  .pulsate {
+    height: 310px;
+    line-height: 280px;
+    vertical-align: middle;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.8;
+    font-size: 1.5em;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-weight: bold;
+    color: $mainFrontColour;
+  }
+
+  @-webkit-keyframes pulsate {
+    0% {
+      opacity: 0.2;
+      font-size: 1.5em;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      font-size: 6.5em;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use 'variables' as *; // Make variables available
+@use 'mixins' as *;    // Make mixins available
+@use 'breakpoints' as *; // Make breakpoint mixins available
+#header {
+  height: 130px;
+  font-family: $mainFontFamily;
+  color: $mainFrontColour;
+  background: $mainHeaderColour url('../../images/logo.png') no-repeat 1% 60%;
+
+  @include breakpointMaxWidth('xs') {
+    background-size: 115px 100px;
+  }
+
+  h1 {
+    display: none;
+    height: 130px;
+    width: 500px;
+    margin-left: 48%;
+    line-height: 130px;
+    text-transform: uppercase;
+
+    @include breakpointMinWidth('l') {
+      display: block;
+    }
+
+    @include breakpointMaxWidth('xxl') {
+      font-size: 2em;
+    }
+  }
+
+  #userProfile {
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+      @include breakpointMaxWidth('m') {
+      h2 {
+        font-size: .9em;
+      }
+
+      h4 {
+        font-size: .8em;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+
+      .dropdown-toggle {
+        cursor: pointer;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 8px 0; // Adjusted padding
+        z-index: 100; // Ensure it's above other elements
+        list-style: none;
+        border-radius: 4px;
+        margin-top: 5px; // Space between toggle and menu
+
+        li a {
+          color: black;
+          padding: 8px 16px; // Padding for links
+          text-decoration: none;
+          display: block;
+          font-size: 0.9em; // Adjust font size if needed
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+      }
+      // Show dropdown on hover - for click, we'll use JS
+      // &:hover .dropdown-menu {
+      //   display: block;
+      // }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "name": "bingo",
+  "version": "1.0.1",
+  "description": "JavaScript based Bingo game developed using TDD approach unit testing with Mocha and Chai. Backend with React/Express/NodeJS and MongoDB for database.",
+  "main": "src/app.js",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.js?$": "babel-jest"
+    },
+    "setupFiles": [
+      "./setupJest.js",
+      "jest-canvas-mock"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihailgaberov/bingo.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "react",
+    "tdd",
+    "bingo",
+    "game"
+  ],
+  "author": "Mihail Gaberov",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "node-fetch": "^2.7.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/eslint-parser": "^7.24.5",
+    "@babel/plugin-transform-runtime": "^7.24.3",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-flow": "^7.24.1",
+    "@babel/preset-react": "^7.24.1",
+    "@babel/register": "^7.23.7",
+    "@babel/runtime": "^7.24.5",
+    "@testing-library/react": "^15.0.7",
+    "autoprefixer": "^10.4.19",
+    "babel-jest": "^29.7.0",
+    "babelify": "^10.0.0",
+    "bootstrap-sass": "^3.4.3",
+    "browserify": "^17.0.0",
+    "classnames": "^2.5.1",
+    "del": "^7.1.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "event-emitter-es6": "^1.1.5",
+    "fbemitter": "^3.0.0",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jest": "^4.0.3",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "immutable": "^4.3.6",
+    "invariant": "^2.2.4",
+    "jest": "^29.7.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "paper": "^0.12.17",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.2",
+    "vanilla-modal": "^1.6.5",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^4.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/mihailgaberov/bingo/issues"
+  },
+  "homepage": "https://github.com/mihailgaberov/bingo#readme"
+}

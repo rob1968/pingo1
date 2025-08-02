@@ -1,0 +1,85 @@
+@use '../variables' as *; // Make variables available
+#ball {
+  display: inline-block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+    -webkit-filter: blur(5px);
+    filter: blur(5px); // Add standard filter property for compatibility
+    z-index: 2;
+  }
+
+  #innerCircle {
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    top: 13%;
+
+    span{
+      display: block;
+      width: 25px;
+      margin: 0 auto;
+      font-family: $mainFontFamily;
+      font-size: 1.3em;
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+      color: black;
+    }
+  }
+
+  &.original_ballB {
+    background: radial-gradient(circle at 50% 120%, #008ed6, #76deef 10%, #055194 80%, #062745 100%);
+  }
+
+  &.original_ballI {
+    background: radial-gradient(circle at 50% 120%, #83d100, #c3ec81 10%, #83d100 80%, #83d100 100%);
+  }
+
+  &.original_ballN {
+    background: radial-gradient(circle at 50% 120%, #e17000, #f6c079 10%, #e17000 80%, #e17000 100%);
+  }
+
+  &.original_ballG {
+    background: radial-gradient(circle at 50% 120%, #a71906, #e35a45 10%, #a71906 80%, #a71906 100%);
+  }
+
+  &.original_ballO {
+    background: radial-gradient(circle at 50% 120%, #642e88, #8f4ad2 10%, #642e88 80%, #642e88 100%);
+  }
+
+  &.redish_ballB {
+    background: radial-gradient(circle at 50% 120%, #008ed6, #ff0000 10%, #055194 80%, #062745 100%);
+  }
+
+  &.redish_ballI {
+    background: radial-gradient(circle at 50% 120%, #83d100, #ff0000 10%, #83d100 80%, #83d100 100%);
+  }
+
+  &.redish_ballN {
+    background: radial-gradient(circle at 50% 120%, #e17000, #ff0000 10%, #e17000 80%, #e17000 100%);
+  }
+
+  &.redish_ballG {
+    background: radial-gradient(circle at 50% 120%, #a71906, #ff0000 10%, #a71906 80%, #a71906 100%);
+  }
+
+  &.redish_ballO {
+    background: radial-gradient(circle at 50% 120%, #642e88, #ff0000 10%, #642e88 80%, #642e88 100%);
+  }
+}
